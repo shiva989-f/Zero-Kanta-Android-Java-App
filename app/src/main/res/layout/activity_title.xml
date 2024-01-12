@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/title_screen"
+    tools:context=".TitleActivity">
+
+    <ImageView
+        android:id="@+id/PPImg"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pvsp"
+        app:layout_constraintBottom_toTopOf="@+id/PAiImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/PAiImg"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:src="@drawable/player_ai"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/titleAD"
+        app:layout_constraintEnd_toEndOf="@+id/PPImg"
+        app:layout_constraintStart_toStartOf="@+id/PPImg" />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/titleAD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="@string/title_banner_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
